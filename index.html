@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="mr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kal Bhairav Nath Dairy | काळभैरव नाथ डेअरी - Sarola</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Yatra+One&family=Rozha+One&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dairyRed: '#800000',      /* Deep Crimson Royal Maroon */
+                        dairyRedDark: '#500000',  /* Rich Shadow Maroon */
+                        dairyGold: '#D4AF37',     /* Royal Cream Gold */
+                        dairyGoldHover: '#B89220',
+                        dairyYellow: '#FFC107',
+                        dairyCream: '#FFFDF5',    /* Fresh Rich Cream */
+                        dairyCardBg: '#FFFFFF',
+                        dairyGreen: '#2A9D8F',    /* Fresh Organic Green */
+                        dairyGreenDark: '#1E7267',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        marathiHeading: ['Rozha One', 'serif'],
+                        yatra: ['Yatra One', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .marathi-font {
+            font-family: 'Rozha One', 'Poppins', serif;
+        }
+        .hero-banner-bg {
+            background: linear-gradient(135deg, #4A0000 0%, #800000 50%, #2B0000 100%);
+        }
+        .gold-border {
+            border: 2px solid #D4AF37;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFE680, #D4AF37, #FFF5CC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#D4AF37 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+            background-color: #FFFDF5;
+        }
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #printable-receipt, #printable-receipt * {
+                visibility: visible;
+            }
+            #printable-receipt {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-pattern text-gray-800 flex flex-col min-h-screen font-sans selection:bg-dairyGold selection:text-dairyRed">
+
+    <!-- Top Header Bar -->
+    <header class="sticky top-0 z-40 bg-dairyRed text-white shadow-xl border-b-4 border-dairyGold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex justify-between items-center">
+            
+            <!-- Logo & Brand Title -->
+            <a href="#home" onclick="switchPage('home')" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full border-2 border-dairyGold bg-white flex items-center justify-center p-0.5 shadow-md overflow-hidden group-hover:scale-105 transition transform">
+                    <img src="WhatsApp Image 2026-09-23 at 4.09.25 PM.jpeg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/100x100/800000/ffffff?text=KBN+Dairy';" 
+                         alt="Kal Bhairav Nath Dairy Logo" 
+                         class="w-full h-full object-cover rounded-full">
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-extrabold tracking-wide text-amber-200 marathi-font leading-tight drop-shadow-sm" 
+                        data-en="Kal Bhairav Nath Dairy" 
+                        data-mr="काळभैरव नाथ डेअरी">
+                        काळभैरव नाथ डेअरी
+                    </h1>
+                    <p class="text-[11px] sm:text-xs text-amber-100/90 font-medium tracking-wide" 
+                       data-en="Sarola, Maharashtra | Pure & Fresh" 
+                       data-mr="सारोळा, महाराष्ट्र | शुद्धता व ताजेपणाची हमी">
+                        सारोळा, महाराष्ट्र | शुद्धता व ताजेपणाची हमी
+                    </p>
+                </div>
+            </a>
+
+            <!-- Navigation Links (Desktop) -->
+            <nav class="hidden md:flex items-center gap-7 font-semibold text-sm">
+                <button onclick="switchPage('home')" class="nav-btn hover:text-dairyGold transition text-amber-100 py-1 border-b-2 border-transparent hover:border-dairyGold" id="nav-home" data-en="Home" data-mr="मुख्य पृष्ठ">मुख्य पृष्ठ</button>
+                <button onclick="switchPage('products')" class="nav-btn hover:text-dairyGold transition text-amber-100 py-1 border-b-2 border-transparent hover:border-dairyGold" id="nav-products" data-en="Products" data-mr="उत्पादने">उत्पादने</button>
+                <button onclick="switchPage('about')" class="nav-btn hover:text-dairyGold transition text-amber-100 py-1 border-b-2 border-transparent hover:border-dairyGold" id="nav-about" data-en="About Us" data-mr="आमच्याबद्दल">आमच्याबद्दल</button>
+                <button onclick="switchPage('feedback')" class="nav-btn hover:text-dairyGold transition text-amber-100 py-1 border-b-2 border-transparent hover:border-dairyGold" id="nav-feedback" data-en="Feedback" data-mr="अभिप्राय">अभिप्राय</button>
+                <button onclick="switchPage('contact')" class="nav-btn hover:text-dairyGold transition text-amber-100 py-1 border-b-2 border-transparent hover:border-dairyGold" id="nav-contact" data-en="Contact" data-mr="संपर्क">संपर्क</button>
+            </nav>
+
+            <!-- Language Switcher & Cart Buttons -->
+            <div class="flex items-center gap-3">
+                <!-- Language Toggle Button -->
+                <button onclick="toggleLanguage()" id="lang-toggle-btn" class="bg-amber-100 hover:bg-dairyGold text-dairyRed font-extrabold px-3 py-1.5 rounded-full text-xs sm:text-sm transition flex items-center gap-1.5 shadow border border-amber-300">
+                    <i class="fa-solid fa-language text-base"></i>
+                    <span id="lang-label">English</span>
+                </button>
+
+                <!-- Cart Button -->
+                <button onclick="toggleCartDrawer()" class="relative bg-gradient-to-r from-dairyGold to-amber-500 hover:from-amber-500 hover:to-dairyGold text-dairyRed font-extrabold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm transition flex items-center gap-2 shadow-lg border border-amber-200">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="hidden sm:inline" data-en="Cart" data-mr="माझी कार्ट">माझी कार्ट</span>
+                    <span id="cart-badge" class="bg-dairyRed text-white text-xs px-2 py-0.5 rounded-full font-bold shadow">0</span>
+                </button>
+
+                <!-- Mobile Menu Hamburger Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-2xl text-amber-200 focus:outline-none ml-1">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dairyRedDark border-t border-amber-600 px-4 py-3 space-y-2 text-center font-medium">
+            <button onclick="switchPage('home'); toggleMobileMenu();" class="block w-full py-2 hover:bg-dairyRed rounded text-amber-100" data-en="Home" data-mr="मुख्य पृष्ठ">मुख्य पृष्ठ</button>
+            <button onclick="switchPage('products'); toggleMobileMenu();" class="block w-full py-2 hover:bg-dairyRed rounded text-amber-100" data-en="Products" data-mr="उत्पादने">उत्पादने</button>
+            <button onclick="switchPage('about'); toggleMobileMenu();" class="block w-full py-2 hover:bg-dairyRed rounded text-amber-100" data-en="About Us" data-mr="आमच्याबद्दल">आमच्याबद्दल</button>
+            <button onclick="switchPage('feedback'); toggleMobileMenu();" class="block w-full py-2 hover:bg-dairyRed rounded text-amber-100" data-en="Feedback" data-mr="अभिप्राय">अभिप्राय</button>
+            <button onclick="switchPage('contact'); toggleMobileMenu();" class="block w-full py-2 hover:bg-dairyRed rounded text-amber-100" data-en="Contact" data-mr="संपर्क">संपर्क</button>
+        </div>
+    </header>
+
+    <!-- MAIN PAGES CONTAINER -->
+    <main class="flex-grow">
+
+        <!-- ================= PAGE 1: HOME ================= -->
+        <section id="page-home" class="page-section">
+            <!-- Hero Banner Section -->
+            <div class="relative hero-banner-bg text-white py-10 lg:py-16 overflow-hidden border-b-4 border-dairyGold shadow-2xl">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-10">
+                    
+                    <div class="lg:w-1/2 space-y-5 text-center lg:text-left z-10">
+                        <div class="inline-flex items-center gap-2 bg-dairyGold text-dairyRed px-4 py-1.5 rounded-full font-extrabold text-xs sm:text-sm tracking-wide shadow-lg border border-amber-200">
+                            <i class="fa-solid fa-award text-base"></i>
+                            <span data-en="100% Pure & Organic Dairy Products" data-mr="१००% अस्सल शुद्ध आणि ताजे दुग्धजन्य पदार्थ">१००% अस्सल शुद्ध आणि ताजे दुग्धजन्य पदार्थ</span>
+                        </div>
+                        
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-wide gold-gradient-text marathi-font drop-shadow-lg" 
+                            data-en="Kal Bhairav Nath Dairy" 
+                            data-mr="काळभैरव नाथ डेअरी">
+                            काळभैरव नाथ डेअरी
+                        </h1>
+
+                        <p class="text-lg sm:text-2xl text-amber-200 font-semibold marathi-font italic drop-shadow" 
+                           data-en="Purity, Trust & Promise of Freshness..." 
+                           data-mr="शुद्धता, विश्वास आणि ताजेपणाची हमी...">
+                            "शुद्धता, विश्वास आणि ताजेपणाची हमी..."
+                        </p>
+
+                        <p class="text-amber-100/90 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal" 
+                           data-en="Bringing farm-fresh cow & buffalo milk, rich aromatic ghee, fresh soft paneer, creamy curd, and traditional sweets straight to your doorstep in Sarola." 
+                           data-mr="सारोळा व परिसरातील प्रत्येक कुटुंबासाठी दररोज ताजे, पौष्टिक गायीचे-म्हशीचे दूध, साजूक तूप, मऊ पनीर, दही, आणि पारंपारिक चविष्ट दुग्धजन्य पदार्थ उपलब्ध!">
+                            सारोळा व परिसरातील प्रत्येक कुटुंबासाठी दररोज ताजे, पौष्टिक गायीचे-म्हशीचे दूध, साजूक तूप, मऊ पनीर, दही, आणि पारंपारिक चविष्ट दुग्धजन्य पदार्थ उपलब्ध!
+                        </p>
+
+                        <div class="pt-3 flex flex-wrap justify-center lg:justify-start gap-4">
+                            <button onclick="switchPage('products')" class="bg-gradient-to-r from-dairyGold to-amber-500 hover:from-amber-500 hover:to-dairyGold text-dairyRed font-extrabold px-7 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1 flex items-center gap-2 text-sm sm:text-base border border-amber-200">
+                                <i class="fa-solid fa-basket-shopping text-lg"></i>
+                                <span data-en="Order Fresh Products" data-mr="ताजे पदार्थ ऑर्डर करा">ताजे पदार्थ ऑर्डर करा</span>
+                            </button>
+
+                            <a href="https://wa.me/918999665720?text=Hello%20Kal%20Bhairav%20Nath%20Dairy,%20I%20want%20to%20order%20dairy%20products" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-extrabold px-6 py-3.5 rounded-2xl shadow-xl transition transform hover:-translate-y-1 flex items-center gap-2 text-sm sm:text-base border border-green-400">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span data-en="WhatsApp Order" data-mr="व्हॉट्सॲपवर ऑर्डर करा">व्हॉट्सॲपवर ऑर्डर करा</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Banner Image -->
+                    <div class="lg:w-1/2 w-full flex justify-center z-10">
+                        <div class="relative max-w-lg w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-dairyGold group">
+                            <img src="WhatsApp Image 2026-09-23 at 4.09.25 PM.jpeg" 
+                                 onerror="this.onerror=null; this.src='https://placehold.co/800x500/800000/ffffff?text=Kal+Bhairav+Nath+Dairy+Sarola';" 
+                                 alt="Kal Bhairav Nath Dairy Main Poster Banner" 
+                                 class="w-full h-auto object-cover transform transition group-hover:scale-105 duration-500">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 text-center">
+                                <p class="text-amber-300 font-extrabold text-sm sm:text-base marathi-font tracking-wide" 
+                                   data-en="Directly from Sarola Farm to Your Kitchen" 
+                                   data-mr="सारोळा फार्मवरून थेट तुमच्या घरापर्यंत">
+                                    सारोळा फार्मवरून थेट तुमच्या घरापर्यंत
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Quality Highlights Grid -->
+            <div class="bg-amber-100/60 py-10 border-b border-amber-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                        <div class="p-5 bg-white rounded-2xl shadow-md border border-amber-200 hover:shadow-xl transition transform hover:-translate-y-1">
+                            <div class="w-14 h-14 bg-red-100 text-dairyRed rounded-full flex items-center justify-center mx-auto mb-3 text-2xl shadow-inner border border-red-200">
+                                <i class="fa-solid fa-cow"></i>
+                            </div>
+                            <h3 class="font-extrabold text-gray-800 text-sm sm:text-base" data-en="100% Pure Milk" data-mr="१००% निरोगी व शुद्ध दूध">१००% निरोगी व शुद्ध दूध</h3>
+                            <p class="text-xs text-gray-500 mt-1" data-en="No chemical additives" data-mr="कोणतीही रासायनिक भेसळ नाही">कोणतीही रासायनिक भेसळ नाही</p>
+                        </div>
+
+                        <div class="p-5 bg-white rounded-2xl shadow-md border border-amber-200 hover:shadow-xl transition transform hover:-translate-y-1">
+                            <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl shadow-inner border border-amber-200">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                            <h3 class="font-extrabold text-gray-800 text-sm sm:text-base" data-en="Daily Home Delivery" data-mr="दररोज घरपोच सेवा">दररोज घरपोच सेवा</h3>
+                            <p class="text-xs text-gray-500 mt-1" data-en="Morning & Evening fresh supply" data-mr="सकाळ-संध्याकाळ ताज्या दुधाची सोय">सकाळ-संध्याकाळ ताज्या दुधाची सोय</p>
+                        </div>
+
+                        <div class="p-5 bg-white rounded-2xl shadow-md border border-amber-200 hover:shadow-xl transition transform hover:-translate-y-1">
+                            <div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl shadow-inner border border-emerald-200">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3 class="font-extrabold text-gray-800 text-sm sm:text-base" data-en="Hygienic Standards" data-mr="स्वच्छ व हायजिनिक">स्वच्छ व हायजिनिक</h3>
+                            <p class="text-xs text-gray-500 mt-1" data-en="Maintained with strict cleanliness" data-mr="अत्यंत स्वच्छ आणि सुरक्षित वातावरण">अत्यंत स्वच्छ आणि सुरक्षित वातावरण</p>
+                        </div>
+
+                        <div class="p-5 bg-white rounded-2xl shadow-md border border-amber-200 hover:shadow-xl transition transform hover:-translate-y-1">
+                            <div class="w-14 h-14 bg-yellow-100 text-yellow-700 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl shadow-inner border border-yellow-200">
+                                <i class="fa-solid fa-qrcode"></i>
+                            </div>
+                            <h3 class="font-extrabold text-gray-800 text-sm sm:text-base" data-en="UPI & Digital Bill" data-mr="UPI व डिजिटल बिल">UPI व डिजिटल बिल</h3>
+                            <p class="text-xs text-gray-500 mt-1" data-en="Instant IPPB QR payment" data-mr="इंडिया पोस्ट पेमेंट बँक क्यूआर सुविधा">इंडिया पोस्ट पेमेंट बँक क्यूआर सुविधा</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Products Spotlight -->
+            <div class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <span class="text-dairyRed font-extrabold text-xs uppercase tracking-widest bg-amber-100 px-3 py-1 rounded-full border border-amber-200" data-en="Fresh Everyday" data-mr="दररोज ताजे">दररोज ताजे</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-dairyRed mt-2 marathi-font" data-en="Featured Dairy Items" data-mr="आमची प्रमुख उत्पादने">आमची प्रमुख उत्पादने</h2>
+                    <div class="w-24 h-1 bg-dairyGold mx-auto mt-2 rounded-full"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="home-featured-products">
+                    <!-- Dynamic Featured Items injected via JS -->
+                </div>
+
+                <div class="text-center mt-10">
+                    <button onclick="switchPage('products')" class="bg-dairyRed hover:bg-dairyRedDark text-white font-extrabold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 border border-amber-300 flex items-center gap-2 mx-auto">
+                        <span data-en="View Full Products Catalog" data-mr="सर्व उत्पादने पहा आणि खरेदी करा">सर्व उत्पादने पहा आणि खरेदी करा</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 2: PRODUCTS ================= -->
+        <section id="page-products" class="page-section hidden py-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <span class="text-dairyRed font-extrabold text-xs uppercase tracking-widest bg-amber-100 px-3 py-1 rounded-full border border-amber-300" data-en="Pure & Natural" data-mr="शुद्ध आणि नैसर्गिक">शुद्ध आणि नैसर्गिक</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-dairyRed mt-2 marathi-font" data-en="Fresh Dairy Products Catalog" data-mr="ताजी उत्पादने आणि दरपत्रक">ताजी उत्पादने आणि दरपत्रक</h2>
+                    <p class="text-gray-600 text-sm mt-1" data-en="Select items and add to cart to order with instant digital bill & QR payment" data-mr="पदार्थ निवडा, कार्टमध्ये जोडा आणि क्यूआर कोडने सहज पेमेंट करा">पदार्थ निवडा, कार्टमध्ये जोडा आणि क्यूआर कोडने सहज पेमेंट करा</p>
+                    <div class="w-24 h-1 bg-dairyGold mx-auto mt-2 rounded-full"></div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="products-grid">
+                    <!-- Dynamic Product Cards injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 3: ABOUT US ================= -->
+        <section id="page-about" class="page-section hidden py-12 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <span class="text-dairyRed font-extrabold text-xs uppercase tracking-widest bg-amber-100 px-3 py-1 rounded-full border border-amber-300" data-en="Our Heritage" data-mr="आमची परंपरा">आमची परंपरा</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2 marathi-font" data-en="About Kal Bhairav Nath Dairy" data-mr="काळभैरव नाथ डेअरी विषयी">काळभैरव नाथ डेअरी विषयी</h2>
+                    <div class="w-24 h-1 bg-dairyGold mx-auto mt-2 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div class="relative">
+                        <img src="WhatsApp Image 2026-09-23 at 4.09.25 PM.jpeg" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x400/800000/ffffff?text=Sarola+Dairy';" 
+                             alt="Dairy Temple Banner" class="rounded-2xl shadow-xl border-4 border-dairyGold">
+                        <div class="absolute -bottom-4 -right-4 bg-dairyGold text-dairyRed p-4 rounded-xl shadow-lg text-center hidden sm:block border border-amber-200">
+                            <p class="font-extrabold text-2xl">100%</p>
+                            <p class="text-xs font-bold uppercase" data-en="Pure & Organic" data-mr="शुद्ध व नैसर्गिक">शुद्ध व नैसर्गिक</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 text-gray-700 leading-relaxed">
+                        <h3 class="text-xl font-extrabold text-dairyRed border-l-4 border-dairyGold pl-3 marathi-font" data-en="Serving Sarola with Trust & Quality" data-mr="सारोळा ग्रामस्थांच्या सेवेत - गुणवत्तेची खात्री">
+                            सारोळा ग्रामस्थांच्या सेवेत - गुणवत्तेची खात्री
+                        </h3>
+                        <p class="text-sm sm:text-base" data-en="Kal Bhairav Nath Dairy in Sarola, Maharashtra, is committed to providing 100% pure, farm-fresh milk and high-quality dairy items. Inspired by spiritual devotion and local agriculture, we ensure every drop of milk is unadulterated and full of essential nutrients." data-mr="काळभैरव नाथ डेअरी, सारोळा (महाराष्ट्र) ही दररोजच्या शुद्ध दुधासाठी व उत्कृष्ट दुग्धजन्य पदार्थांसाठी अत्यंत विश्वासू नाव आहे. ग्रामस्थांचे आरोग्य आणि समाधान हीच आमची प्राथमिकता आहे. आम्ही कोणत्याही प्रकारची रासायनिक भेसळ न करता ग्राहकांपर्यंत शुद्ध ताजे दूध व साजूक पदार्थ पोहोचवतो.">
+                            काळभैरव नाथ डेअरी, सारोळा (महाराष्ट्र) ही दररोजच्या शुद्ध दुधासाठी व उत्कृष्ट दुग्धजन्य पदार्थांसाठी अत्यंत विश्वासू नाव आहे. ग्रामस्थांचे आरोग्य आणि समाधान हीच आमची प्राथमिकता आहे. आम्ही कोणत्याही प्रकारची रासायनिक भेसळ न करता ग्राहकांपर्यंत शुद्ध ताजे दूध व साजूक पदार्थ पोहोचवतो.
+                        </p>
+                        
+                        <div class="space-y-2 pt-2">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-dairyGreen text-lg"></i>
+                                <span class="font-bold text-sm text-gray-800" data-en="Pure Cow Milk & Thick Creamy Buffalo Milk" data-mr="शुद्ध गायीचे आणि घट्ट म्हशीचे ताजे दूध">शुद्ध गायीचे आणि घट्ट म्हशीचे ताजे दूध</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-dairyGreen text-lg"></i>
+                                <span class="font-bold text-sm text-gray-800" data-en="Traditional Pure Desi Ghee & Fresh Soft Paneer" data-mr="पारंपारिक रवाळ साजूक तूप आणि मऊ ताजे पनीर">पारंपारिक रवाळ साजूक तूप आणि मऊ ताजे पनीर</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-dairyGreen text-lg"></i>
+                                <span class="font-bold text-sm text-gray-800" data-en="Hygienic packaging and prompt home delivery in Sarola" data-mr="सुरक्षित पॅकिंग आणि सारोळा परिसरात तत्पर डिलीव्हरी">सुरक्षित पॅकिंग आणि सारोळा परिसरात तत्पर डिलीव्हरी</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-amber-100/60 p-4 rounded-xl border border-amber-300 mt-4 flex items-center gap-4 shadow-sm">
+                            <div class="text-dairyRed text-3xl">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-600 font-bold uppercase" data-en="Daily Milk Subscription & Bulk Orders" data-mr="मोठ्या ऑर्डरसाठी किंवा रोजच्या दुधाच्या नोंदणीसाठी">मोठ्या ऑर्डरसाठी किंवा रोजच्या दुधाच्या नोंदणीसाठी</p>
+                                <a href="tel:8999665720" class="text-xl font-extrabold text-dairyRed hover:underline">8999665720</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 4: FEEDBACK ================= -->
+        <section id="page-feedback" class="page-section hidden py-10 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-extrabold text-dairyRed marathi-font" data-en="Customer Reviews & Feedback" data-mr="ग्राहकांचे अभिप्राय व पुनरावलोकन">ग्राहकांचे अभिप्राय व पुनरावलोकन</h2>
+                    <p class="text-gray-600 text-sm mt-1" data-en="We value your opinion! Share your experience with Kal Bhairav Nath Dairy." data-mr="तुमचा अनुभव आमच्यासाठी अत्यंत महत्त्वाचा आहे!">तुमचा अनुभव आमच्यासाठी अत्यंत महत्त्वाचा आहे!</p>
+                    <div class="w-20 h-1 bg-dairyGold mx-auto mt-2 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Feedback Form -->
+                    <div class="bg-amber-50 p-6 rounded-2xl border border-amber-300 shadow-sm">
+                        <h3 class="text-lg font-bold text-dairyRed mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <span data-en="Write Your Feedback" data-mr="तुमचा अभिप्राय द्या">तुमचा अभिप्राय द्या</span>
+                        </h3>
+                        <form id="feedback-form" onsubmit="handleFeedbackSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-extrabold text-gray-700 uppercase mb-1" data-en="Your Name" data-mr="तुमचे नाव">तुमचे नाव</label>
+                                <input type="text" id="fb-name" required placeholder="e.g. Ramesh Patil / रमेश पाटील" class="w-full px-3 py-2 border border-amber-300 rounded-lg focus:ring-2 focus:ring-dairyRed focus:outline-none text-sm bg-white">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-extrabold text-gray-700 uppercase mb-1" data-en="Rating" data-mr="रेटिंग द्या">रेटिंग द्या</label>
+                                <div class="flex items-center gap-2 text-2xl text-amber-400 cursor-pointer" id="star-rating-container">
+                                    <i class="fa-star fa-solid hover:scale-110 transition" onclick="setRating(1)"></i>
+                                    <i class="fa-star fa-solid hover:scale-110 transition" onclick="setRating(2)"></i>
+                                    <i class="fa-star fa-solid hover:scale-110 transition" onclick="setRating(3)"></i>
+                                    <i class="fa-star fa-solid hover:scale-110 transition" onclick="setRating(4)"></i>
+                                    <i class="fa-star fa-solid hover:scale-110 transition" onclick="setRating(5)"></i>
+                                </div>
+                                <input type="hidden" id="fb-rating" value="5">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-extrabold text-gray-700 uppercase mb-1" data-en="Your Review / Comments" data-mr="तुमचा अभिप्राय किंवा संदेश">तुमचा अभिप्राय किंवा संदेश</label>
+                                <textarea id="fb-message" rows="3" required placeholder="Milk quality is amazing..." class="w-full px-3 py-2 border border-amber-300 rounded-lg focus:ring-2 focus:ring-dairyRed focus:outline-none text-sm bg-white"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-dairyRed hover:bg-dairyRedDark text-white font-extrabold py-2.5 rounded-xl shadow transition text-sm flex items-center justify-center gap-2 border border-amber-300">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span data-en="Submit Feedback" data-mr="अभिप्राय पाठवा">अभिप्राय पाठवा</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Customer Reviews Display -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+                            <i class="fa-solid fa-comments text-dairyGold"></i>
+                            <span data-en="Recent Customer Reviews" data-mr="ग्राहकांच्या अलीकडील प्रतिक्रिया">ग्राहकांच्या अलीकडील प्रतिक्रिया</span>
+                        </h3>
+
+                        <div id="feedback-list" class="space-y-3 max-h-[380px] overflow-y-auto pr-1">
+                            <!-- Dynamic feedback reviews injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 5: CONTACT ================= -->
+        <section id="page-contact" class="page-section hidden py-10">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-extrabold text-dairyRed marathi-font" data-en="Contact Kal Bhairav Nath Dairy" data-mr="आमच्याशी संपर्क साधा">आमच्याशी संपर्क साधा</h2>
+                    <p class="text-gray-600 text-sm mt-1" data-en="Visit us in Sarola or call us for orders and queries" data-mr="ऑर्डर किंवा चौकशीसाठी कॉल करा किंवा दुकानाला भेट द्या">ऑर्डर किंवा चौकशीसाठी कॉल करा किंवा दुकानाला भेट द्या</p>
+                    <div class="w-20 h-1 bg-dairyGold mx-auto mt-2 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Address Card -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border border-amber-200 text-center flex flex-col items-center">
+                        <div class="w-14 h-14 bg-red-100 text-dairyRed rounded-full flex items-center justify-center text-2xl mb-4 border border-red-200">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h3 class="font-extrabold text-gray-800 text-lg mb-1" data-en="Dairy Address" data-mr="डेअरीचा पत्ता">डेअरीचा पत्ता</h3>
+                        <p class="text-dairyRed font-bold text-sm" data-en="Kal Bhairav Nath Dairy" data-mr="काळभैरव नाथ डेअरी">काळभैरव नाथ डेअरी</p>
+                        <p class="text-gray-600 text-xs mt-1" data-en="Sarola, Maharashtra, India" data-mr="सारोळा, महाराष्ट्र, भारत">सारोळा, महाराष्ट्र, भारत</p>
+                    </div>
+
+                    <!-- Mobile Contact Card -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border border-amber-200 text-center flex flex-col items-center">
+                        <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center text-2xl mb-4 border border-amber-200">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3 class="font-extrabold text-gray-800 text-lg mb-1" data-en="Phone & WhatsApp" data-mr="फोन व व्हॉट्सॲप नंबर">फोन व व्हॉट्सॲप नंबर</h3>
+                        <a href="tel:8999665720" class="text-dairyRed font-extrabold text-2xl hover:underline">8999665720</a>
+                        <div class="mt-3 flex gap-2">
+                            <a href="tel:8999665720" class="bg-dairyRed text-white text-xs px-3.5 py-1.5 rounded-full font-bold hover:bg-dairyRedDark transition">
+                                <i class="fa-solid fa-phone mr-1"></i> Call
+                            </a>
+                            <a href="https://wa.me/918999665720" target="_blank" class="bg-green-600 text-white text-xs px-3.5 py-1.5 rounded-full font-bold hover:bg-green-700 transition">
+                                <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Timings Card -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border border-amber-200 text-center flex flex-col items-center">
+                        <div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-2xl mb-4 border border-emerald-200">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3 class="font-extrabold text-gray-800 text-lg mb-1" data-en="Working Hours" data-mr="कामाची वेळ">कामाची वेळ</h3>
+                        <p class="text-dairyGreen font-bold text-sm" data-en="Open Every Day" data-mr="सातही दिवस उघडे">सातही दिवस उघडे</p>
+                        <p class="text-xs text-gray-600 mt-1" data-en="Morning: 6:00 AM - 12:00 PM" data-mr="सकाळ: ६:०० ते १२:००">सकाळ: ६:०० ते १२:००</p>
+                        <p class="text-xs text-gray-600" data-en="Evening: 4:30 PM - 9:00 PM" data-mr="संध्याकाळ: ४:३० ते ९:००">संध्याकाळ: ४:३० ते ९:००</p>
+                    </div>
+                </div>
+
+                <!-- Google Maps Card -->
+                <div class="mt-8 bg-white p-4 rounded-2xl border border-amber-200 shadow-md">
+                    <h3 class="font-bold text-gray-800 mb-3 text-center sm:text-left flex items-center justify-center sm:justify-start gap-2">
+                        <i class="fa-solid fa-map-location-dot text-dairyRed"></i>
+                        <span data-en="Location Map (Sarola)" data-mr="गूगल मॅप लोकेशन (सारोळा)">गूगल मॅप लोकेशन (सारोळा)</span>
+                    </h3>
+                    <div class="w-full h-60 bg-amber-50 rounded-xl overflow-hidden flex flex-col items-center justify-center border text-gray-500 text-center p-4">
+                        <i class="fa-solid fa-location-dot text-5xl text-dairyRed mb-2 animate-bounce"></i>
+                        <p class="font-extrabold text-gray-800 text-base">Kal Bhairav Nath Dairy - काळभैरव नाथ डेअरी</p>
+                        <p class="text-xs text-gray-600 mt-1">Sarola, Maharashtra</p>
+                        <a href="https://maps.google.com/?q=Sarola+Maharashtra" target="_blank" class="mt-3 bg-dairyRed text-white text-xs font-bold px-4 py-2 rounded-xl hover:bg-dairyRedDark transition flex items-center gap-1.5 shadow border border-amber-300">
+                            <i class="fa-solid fa-diamond-turn-right"></i>
+                            <span data-en="Open in Google Maps" data-mr="गूगल मॅप्सवर पहा">गूगल मॅप्सवर पहा</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHOPPING CART SLIDE-OVER DRAWER -->
+    <div id="cart-drawer-backdrop" class="fixed inset-0 bg-black/60 z-50 hidden transition-opacity duration-300" onclick="toggleCartDrawer()"></div>
+    
+    <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full sm:w-96 bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+        <!-- Cart Header -->
+        <div class="p-4 bg-dairyRed text-white flex justify-between items-center border-b-2 border-dairyGold">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-cart-shopping text-dairyGold text-lg"></i>
+                <h3 class="font-extrabold text-lg" data-en="Your Shopping Cart" data-mr="तुमची खरेदी कार्ट">तुमची खरेदी कार्ट</h3>
+            </div>
+            <button onclick="toggleCartDrawer()" class="text-white hover:text-dairyGold text-2xl focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Cart Items List -->
+        <div class="flex-grow overflow-y-auto p-4 space-y-3" id="cart-items-container">
+            <!-- Dynamic Cart Items injected here -->
+        </div>
+
+        <!-- Cart Summary & Customer Order Form -->
+        <div class="p-4 bg-amber-50 border-t-2 border-amber-200 space-y-3">
+            <div class="flex justify-between items-center font-extrabold text-base text-gray-800">
+                <span data-en="Total Amount:" data-mr="एकूण रक्कम:">एकूण रक्कम:</span>
+                <span id="cart-total-price" class="text-dairyRed text-2xl font-black">₹0</span>
+            </div>
+
+            <!-- Customer Delivery Details -->
+            <div class="space-y-2 border-t border-amber-200 pt-3">
+                <p class="text-xs font-extrabold text-dairyRed uppercase" data-en="Delivery Info for Bill & QR" data-mr="ग्राहकाची माहिती (बिल व क्यूआर कोडसाठी)">ग्राहकाची माहिती</p>
+                <input type="text" id="cust-name" placeholder="Customer Name / ग्राहकाचे नाव *" required class="w-full text-xs px-3 py-2 border border-amber-300 rounded-lg focus:ring-1 focus:ring-dairyRed focus:outline-none bg-white">
+                <input type="tel" id="cust-phone" placeholder="Mobile No. / मोबाईल नं *" required class="w-full text-xs px-3 py-2 border border-amber-300 rounded-lg focus:ring-1 focus:ring-dairyRed focus:outline-none bg-white">
+                <input type="text" id="cust-address" placeholder="Sarola Address / पत्ता *" required class="w-full text-xs px-3 py-2 border border-amber-300 rounded-lg focus:ring-1 focus:ring-dairyRed focus:outline-none bg-white">
+            </div>
+
+            <button onclick="confirmAndGenerateBill()" id="confirm-order-btn" class="w-full bg-gradient-to-r from-dairyRed to-dairyRedDark hover:from-dairyRedDark hover:to-dairyRed text-white font-extrabold py-3 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm border border-amber-300">
+                <i class="fa-solid fa-qrcode text-dairyGold text-base"></i>
+                <span data-en="Confirm Order & Generate Bill" data-mr="ऑर्डर कन्फर्म करा व बिल मिळवा">ऑर्डर कन्फर्म करा व बिल मिळवा</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- BILL / RECEIPT & UPI QR CODE MODAL -->
+    <div id="bill-modal" class="fixed inset-0 bg-black/75 z-50 hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-lg w-full max-h-[92vh] overflow-y-auto p-5 sm:p-6 shadow-2xl border-4 border-dairyGold relative my-auto">
+            
+            <button onclick="closeBillModal()" class="absolute top-3 right-3 text-gray-400 hover:text-red-600 text-2xl font-bold no-print">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+
+            <!-- Printable Receipt Area -->
+            <div id="printable-receipt" class="space-y-4">
+                <!-- Receipt Header -->
+                <div class="text-center border-b-2 pb-3 border-dashed border-amber-300">
+                    <div class="w-14 h-14 rounded-full border-2 border-dairyGold mx-auto overflow-hidden mb-1.5 shadow">
+                        <img src="WhatsApp Image 2026-09-23 at 4.09.25 PM.jpeg" onerror="this.onerror=null; this.src='https://placehold.co/100x100/800000/ffffff?text=KBN';" alt="Dairy Logo" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-dairyRed marathi-font">काळभैरव नाथ डेअरी</h3>
+                    <p class="text-xs text-gray-600 font-semibold">Sarola, Maharashtra | Contact: 8999665720</p>
+                    <div class="inline-block bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-3 py-0.5 rounded-full mt-1.5 border border-emerald-300">
+                        <i class="fa-solid fa-circle-check mr-1"></i> Tax Invoice / पावती #<span id="bill-order-id">1001</span>
+                    </div>
+                </div>
+
+                <!-- Customer Details -->
+                <div class="bg-amber-50 p-3 rounded-xl text-xs space-y-1 text-gray-700 border border-amber-200">
+                    <div class="flex justify-between">
+                        <span class="font-bold text-gray-600" data-en="Date & Time:" data-mr="दिनांक व वेळ:">दिनांक व वेळ:</span>
+                        <span id="bill-date" class="font-semibold text-gray-800">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold text-gray-600" data-en="Customer Name:" data-mr="ग्राहक नाव:">ग्राहक नाव:</span>
+                        <span id="bill-cust-name" class="font-extrabold text-dairyRed">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold text-gray-600" data-en="Mobile No:" data-mr="मोबाईल नं:">मोबाईल नं:</span>
+                        <span id="bill-cust-phone" class="font-semibold text-gray-800">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold text-gray-600" data-en="Delivery Address:" data-mr="पत्ता:">पत्ता:</span>
+                        <span id="bill-cust-address" class="font-semibold text-gray-800">-</span>
+                    </div>
+                </div>
+
+                <!-- Bill Items Table -->
+                <div class="border border-amber-300 rounded-xl overflow-hidden shadow-sm">
+                    <table class="w-full text-xs text-left">
+                        <thead class="bg-dairyRed text-white font-extrabold">
+                            <tr>
+                                <th class="p-2.5" data-en="Item" data-mr="पदार्थ">पदार्थ</th>
+                                <th class="p-2.5 text-center" data-en="Qty" data-mr="नग">नग</th>
+                                <th class="p-2.5 text-right" data-en="Rate" data-mr="दर">दर</th>
+                                <th class="p-2.5 text-right" data-en="Total" data-mr="एकूण">एकूण</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bill-items-body" class="divide-y divide-amber-200 bg-white">
+                            <!-- Items rows dynamically rendered here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Total Amount Highlight -->
+                <div class="flex justify-between items-center p-3.5 bg-gradient-to-r from-amber-100 to-amber-200 rounded-xl text-sm font-extrabold text-dairyRed border border-amber-300 shadow-sm">
+                    <span data-en="Grand Total Payable:" data-mr="एकूण देय रक्कम:">एकूण देय रक्कम:</span>
+                    <span id="bill-grand-total" class="text-2xl font-black text-dairyRed">₹0</span>
+                </div>
+
+                <!-- Provided India Post Payments Bank QR Code Section -->
+                <div class="border-2 border-dashed border-dairyGold p-4 rounded-2xl bg-amber-50/70 text-center space-y-2">
+                    <p class="text-xs font-extrabold text-dairyRed uppercase tracking-wide" data-en="Scan QR to Pay via PhonePe / GPay / Paytm" data-mr="स्कॅन करा आणि PhonePe / Google Pay द्वारे पेमेंट करा">स्कॅन करा आणि PhonePe / Google Pay द्वारे पेमेंट करा</p>
+                    
+                    <!-- Displayed Provided India Post Payments Bank QR Code Image -->
+                    <div class="flex justify-center my-2">
+                        <div class="bg-white p-2 rounded-xl shadow-lg border-2 border-amber-300 max-w-[210px]">
+                            <img src="WhatsApp Image 2026-09-23 at 6.07.41 AM.jpeg" 
+                                 onerror="this.onerror=null; this.src='https://placehold.co/200x260/800000/ffffff?text=IPPB+QR+Code';" 
+                                 alt="India Post Payments Bank QR Code - Sopan Pandit Gawali" 
+                                 class="w-full h-auto object-contain rounded">
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-amber-900 font-semibold" data-en="After payment, click WhatsApp button to share screenshot for fast dispatch!" data-mr="पेमेंट झाल्यावर व्हॉट्सॲप बटणावर क्लिक करून स्क्रीनशॉट पाठवा!">पेमेंट झाल्यावर व्हॉट्सॲप बटणावर क्लिक करून स्क्रीनशॉट पाठवा!</p>
+                </div>
+            </div>
+
+            <!-- Modal Action Buttons -->
+            <div class="mt-5 grid grid-cols-2 gap-3 no-print">
+                <button onclick="printBill()" class="bg-gray-800 hover:bg-black text-white font-extrabold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow">
+                    <i class="fa-solid fa-print text-sm"></i>
+                    <span data-en="Print Invoice" data-mr="बिल प्रिंट करा">बिल प्रिंट करा</span>
+                </button>
+                <button onclick="sendWhatsAppReceipt()" class="bg-green-600 hover:bg-green-700 text-white font-extrabold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span data-en="Send via WhatsApp" data-mr="व्हॉट्सॲपवर पाठवा">व्हॉट्सॲपवर पाठवा</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-dairyRedDark text-amber-100 border-t-4 border-dairyGold py-10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-extrabold text-amber-200 marathi-font mb-2" data-en="Kal Bhairav Nath Dairy" data-mr="काळभैरव नाथ डेअरी">काळभैरव नाथ डेअरी</h3>
+                    <p class="text-xs text-amber-100/80 leading-relaxed" data-en="Freshness, Purity and Trust guaranteed for every home in Sarola, Maharashtra." data-mr="सारोळा परिसरातील प्रत्येक कुटुंबासाठी ताजे, अत्यंत शुद्ध आणि आरोग्यदायी दुग्धजन्य पदार्थ.">
+                        सारोळा परिसरातील प्रत्येक कुटुंबासाठी ताजे, अत्यंत शुद्ध आणि आरोग्यदायी दुग्धजन्य पदार्थ.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-extrabold text-dairyGold uppercase mb-3" data-en="Quick Navigation" data-mr="नेव्हिगेशन">नेव्हिगेशन</h4>
+                    <ul class="text-xs space-y-2 font-medium">
+                        <li><button onclick="switchPage('home')" class="hover:text-dairyGold transition" data-en="Home" data-mr="मुख्य पृष्ठ">मुख्य पृष्ठ</button></li>
+                        <li><button onclick="switchPage('products')" class="hover:text-dairyGold transition" data-en="Products Catalog" data-mr="उत्पादने">उत्पादने</button></li>
+                        <li><button onclick="switchPage('about')" class="hover:text-dairyGold transition" data-en="About Us" data-mr="आमच्याबद्दल">आमच्याबद्दल</button></li>
+                        <li><button onclick="switchPage('feedback')" class="hover:text-dairyGold transition" data-en="Feedback" data-mr="अभिप्राय">अभिप्राय</button></li>
+                        <li><button onclick="switchPage('contact')" class="hover:text-dairyGold transition" data-en="Contact Us" data-mr="संपर्क">संपर्क</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-extrabold text-dairyGold uppercase mb-3" data-en="Contact Sarola Office" data-mr="संपर्क माहिती">संपर्क माहिती</h4>
+                    <p class="text-xs text-amber-100"><i class="fa-solid fa-location-dot text-dairyGold mr-2"></i> Sarola, Maharashtra</p>
+                    <p class="text-xs text-amber-100 mt-2"><i class="fa-solid fa-phone text-dairyGold mr-2"></i> <a href="tel:8999665720" class="hover:underline font-bold">8999665720</a></p>
+                    <p class="text-xs text-amber-100 mt-2"><i class="fa-brands fa-whatsapp text-dairyGold mr-2"></i> <a href="https://wa.me/918999665720" target="_blank" class="hover:underline font-bold">WhatsApp Order</a></p>
+                </div>
+            </div>
+
+            <div class="border-t border-red-900 mt-8 pt-4 text-center text-xs text-amber-300/70">
+                <p>&copy; <span id="current-year"></span> Kal Bhairav Nath Dairy (काळभैरव नाथ डेअरी), Sarola. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // State Management
+        let currentLang = 'mr'; // Default Marathi
+        let cart = [];
+        let selectedStarRating = 5;
+
+        // Dairy Products Data
+        const products = [
+            {
+                id: 'p1',
+                nameEn: 'Fresh Cow Milk (गायीचे दूध)',
+                nameMr: 'ताजे गायीचे दूध',
+                unitEn: '1 Liter',
+                unitMr: '१ लिटर',
+                price: 56,
+                icon: 'fa-cow',
+                image: 'cow.png',
+                descEn: '100% pure, farm-fresh nutrient-rich cow milk.',
+                descMr: 'पौष्टिक आणि पचनास हलके १००% ताजे गायीचे दूध.'
+            },
+            {
+                id: 'p2',
+                nameEn: 'Buffalo Milk (म्हशीचे दूध)',
+                nameMr: 'म्हशीचे घट्ट दूध',
+                unitEn: '1 Liter',
+                unitMr: '१ लिटर',
+                price: 70,
+                icon: 'fa-glass-water',
+                image: 'buffalo.png',
+                descEn: 'High fat, rich and creamy buffalo milk for tea & sweets.',
+                descMr: 'चहा व मिठाईसाठी उत्तम, मलईदार घट्ट म्हशीचे दूध.'
+            },
+            {
+                id: 'p3',
+                nameEn: 'Pure Cow Ghee (साजूक तूप)',
+                nameMr: 'शुद्ध साजूक तूप',
+                unitEn: '500 gm',
+                unitMr: '५०० ग्रॅम',
+                price: 380,
+                icon: 'fa-jar',
+                image: 'ghee.png',
+                descEn: 'Aromatic, traditional granular pure desi ghee.',
+                descMr: 'पारंपारिक पद्धतीने बनवलेले अस्सल रवाळ साजूक तूप.'
+            },
+            {
+                id: 'p4',
+                nameEn: 'Fresh Paneer (ताजे पनीर)',
+                nameMr: 'ताजे मऊ पनीर',
+                unitEn: '250 gm',
+                unitMr: '२५० ग्रॅम',
+                price: 110,
+                icon: 'fa-cubes',
+                image: 'paneer.png',
+                descEn: 'Soft, hygienic, protein-packed fresh paneer.',
+                descMr: 'मऊ आणि प्रोटीनयुक्त ताजे शुद्ध पनीर.'
+            },
+            {
+                id: 'p5',
+                nameEn: 'Fresh Curd / Dahi (ताजे दही)',
+                nameMr: 'घट्ट ताजे दही',
+                unitEn: '500 gm',
+                unitMr: '५०० ग्रॅम',
+                price: 45,
+                icon: 'fa-bowl-food',
+                image: 'curd.png',
+                descEn: 'Thick, delicious naturally set fresh curd.',
+                descMr: 'नैसर्गिकरित्या लावलेले घट्ट आणि गोड ताजे दही.'
+            },
+            {
+                id: 'p6',
+                nameEn: 'Butter / Loni (पांढरे लोणी)',
+                nameMr: 'ताजे पांढरे लोणी',
+                unitEn: '250 gm',
+                unitMr: '२५० ग्रॅम',
+                price: 120,
+                icon: 'fa-cheese',
+                image: 'loni.png',
+                descEn: 'Untouched pure white homemade farm butter.',
+                descMr: 'अस्सल घरगुती शुद्ध पांढरे ताजे लोणी.'
+            },
+            {
+                id: 'p7',
+                nameEn: 'Shrikhand / Amrakhand (श्रीखंड / आम्रखंड)',
+                nameMr: 'केसर श्रीखंड / आम्रखंड',
+                unitEn: '500 gm',
+                unitMr: '५०० ग्रॅम',
+                price: 160,
+                icon: 'fa-ice-cream',
+                image: 'khand.png',
+                descEn: 'Creamy cardamom saffron flavored classic Shrikhand.',
+                descMr: 'चविष्ट केसर-इलायची युक्त स्वादिष्ट श्रीखंड.'
+            },
+            {
+                id: 'p8',
+                nameEn: 'Fresh Khawa / Mawa (ताजा खवा)',
+                nameMr: 'अस्सल ताजा खवा',
+                unitEn: '250 gm',
+                unitMr: '२५० ग्रॅम',
+                price: 130,
+                icon: 'fa-box',
+                image: 'khava.png',
+                descEn: 'Pure milk khawa for sweet preparation.',
+                descMr: 'गुलाबजाम व मिठाई बनवण्यासाठी शुद्ध दुधाचा खवा.'
+            },
+            {
+                id: 'p9',
+                nameEn: 'Spiced Buttermilk / Chhas (ताक)',
+                nameMr: 'ताजे मसाला ताक',
+                unitEn: '1 Liter',
+                unitMr: '१ लिटर',
+                price: 30,
+                icon: 'fa-bottle-droplet',
+                image: 'tak.png',
+                descEn: 'Refreshing masala spiced digestive buttermilk.',
+                descMr: 'आरोग्यदायी आणि थंडगार चविष्ट मसाला ताक.'
+            }
+        ];
+
+        // Sample Customer Feedbacks
+        let customerFeedbacks = [
+            {
+                name: 'आनंद शिंदे (Anand Shinde)',
+                rating: 5,
+                comment: 'सारोळा मधील सर्वात उत्कृष्ट आणि शुद्ध दुधाची डेअरी! म्हशीचे दूध खूप घट्ट आहे.'
+            },
+            {
+                name: 'पूजा पाटील (Pooja Patil)',
+                rating: 5,
+                comment: 'साजूक तूप आणि श्रीखंडाची चव अप्रतिम आहे. घरपोच सेवा वेळच्या वेळी मिळते.'
+            },
+            {
+                name: 'रमेश कदम (Ramesh Kadam)',
+                rating: 5,
+                comment: 'पनीर अगदी मऊ आणि ताजे असते. बिल आणि क्यूआर कोड पेमेंट सोय खूप सोपी आहे.'
+            }
+        ];
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            renderProducts();
+            renderFeaturedProducts();
+            renderFeedbacks();
+            updateCartUI();
+        });
+
+        // Navigation Switcher
+        function switchPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.add('hidden'));
+            const activePage = document.getElementById(`page-${pageId}`);
+            if (activePage) {
+                activePage.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Language Switcher Toggle (English / मराठी)
+        function toggleLanguage() {
+            currentLang = currentLang === 'mr' ? 'en' : 'mr';
+            document.getElementById('lang-label').textContent = currentLang === 'mr' ? 'English' : 'मराठी';
+            
+            // Translate all elements with data-en & data-mr
+            document.querySelectorAll('[data-en][data-mr]').forEach(el => {
+                const text = el.getAttribute(`data-${currentLang}`);
+                if (text) el.textContent = text;
+            });
+
+            // Re-render components
+            renderProducts();
+            renderFeaturedProducts();
+            updateCartUI();
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = products.map(prod => {
+                const name = currentLang === 'mr' ? prod.nameMr : prod.nameEn;
+                const unit = currentLang === 'mr' ? prod.unitMr : prod.unitEn;
+                const desc = currentLang === 'mr' ? prod.descMr : prod.descEn;
+
+                return `
+                    <div class="bg-white rounded-2xl overflow-hidden border border-amber-200 shadow-md hover:shadow-2xl transition duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="relative h-48 overflow-hidden bg-amber-100">
+                                <img src="${prod.image}" onerror="this.onerror=null; this.src='https://placehold.co/400x300/800000/ffffff?text=${encodeURIComponent(prod.nameEn)}';" alt="${name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                <span class="absolute top-3 right-3 bg-dairyRed text-dairyGold font-extrabold text-xs px-2.5 py-1 rounded-full shadow border border-amber-300">
+                                    ${unit}
+                                </span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-extrabold text-gray-800 text-base sm:text-lg marathi-font mb-1">${name}</h3>
+                                <p class="text-xs text-gray-500 mb-3">${desc}</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-dairyRed font-black text-2xl">₹${prod.price}</span>
+                                    <span class="text-[11px] bg-amber-100 text-amber-900 px-2.5 py-1 rounded-md font-bold border border-amber-200">
+                                        <i class="fa-solid ${prod.icon} mr-1 text-dairyRed"></i> ${unit}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <button onclick="addToCart('${prod.id}')" class="w-full bg-gradient-to-r from-dairyGold to-amber-500 hover:from-amber-500 hover:to-dairyGold text-dairyRed font-extrabold py-2.5 rounded-xl shadow transition flex items-center justify-center gap-2 text-sm border border-amber-200">
+                                <i class="fa-solid fa-plus-circle text-base"></i>
+                                <span>${currentLang === 'mr' ? 'कार्टमध्ये जोडा' : 'Add to Cart'}</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Render Home Page Featured Items
+        function renderFeaturedProducts() {
+            const container = document.getElementById('home-featured-products');
+            const featured = products.slice(0, 3);
+            container.innerHTML = featured.map(prod => {
+                const name = currentLang === 'mr' ? prod.nameMr : prod.nameEn;
+                const unit = currentLang === 'mr' ? prod.unitMr : prod.unitEn;
+                return `
+                    <div class="bg-white rounded-2xl p-4 border border-amber-200 shadow-sm flex items-center gap-4 hover:shadow-md transition">
+                        <img src="${prod.image}" onerror="this.onerror=null; this.src='https://placehold.co/150x150/800000/ffffff?text=Dairy';" alt="${name}" class="w-20 h-20 rounded-xl object-cover border-2 border-amber-300">
+                        <div class="flex-grow">
+                            <h4 class="font-extrabold text-gray-800 marathi-font text-base">${name}</h4>
+                            <p class="text-xs text-gray-500 font-medium">${unit}</p>
+                            <p class="text-dairyRed font-black text-lg mt-1">₹${prod.price}</p>
+                        </div>
+                        <button onclick="addToCart('${prod.id}'); switchPage('products');" class="bg-dairyRed text-white p-3 rounded-xl hover:bg-dairyRedDark shadow border border-amber-300">
+                            <i class="fa-solid fa-cart-plus text-base"></i>
+                        </button>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cart-drawer');
+            const backdrop = document.getElementById('cart-drawer-backdrop');
+            drawer.classList.toggle('translate-x-full');
+            backdrop.classList.toggle('hidden');
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+
+            updateCartUI();
+            
+            // Badge pulse animation
+            const badge = document.getElementById('cart-badge');
+            badge.classList.add('scale-125');
+            setTimeout(() => badge.classList.remove('scale-125'), 200);
+        }
+
+        function updateQty(productId, change) {
+            const item = cart.find(i => i.id === productId);
+            if (item) {
+                item.qty += change;
+                if (item.qty <= 0) {
+                    cart = cart.filter(i => i.id !== productId);
+                }
+            }
+            updateCartUI();
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(i => i.id !== productId);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cart-items-container');
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            document.getElementById('cart-badge').textContent = totalCount;
+            document.getElementById('cart-total-price').textContent = `₹${totalPrice}`;
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 text-gray-400">
+                        <i class="fa-solid fa-basket-shopping text-5xl mb-3 text-amber-300"></i>
+                        <p class="font-extrabold text-gray-600 text-sm">${currentLang === 'mr' ? 'तुमची कार्ट रिकामी आहे' : 'Your cart is empty'}</p>
+                        <p class="text-xs text-gray-400 mt-1">${currentLang === 'mr' ? 'उत्पादने विभागातून निवडा' : 'Add products from catalog'}</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = cart.map(item => {
+                const name = currentLang === 'mr' ? item.nameMr : item.nameEn;
+                const unit = currentLang === 'mr' ? item.unitMr : item.unitEn;
+
+                return `
+                    <div class="flex items-center justify-between bg-amber-50/70 p-3 rounded-xl border border-amber-200">
+                        <div class="flex items-center gap-3">
+                            <img src="${item.image}" onerror="this.onerror=null; this.src='https://placehold.co/100x100/800000/ffffff?text=Item';" class="w-12 h-12 rounded-lg object-cover border border-amber-300">
+                            <div>
+                                <h4 class="font-extrabold text-gray-800 text-xs sm:text-sm marathi-font">${name}</h4>
+                                <p class="text-[11px] text-gray-500 font-semibold">${unit} - ₹${item.price}</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <div class="flex items-center bg-white border border-amber-300 rounded-lg overflow-hidden shadow-sm">
+                                <button onclick="updateQty('${item.id}', -1)" class="px-2 py-0.5 text-gray-700 hover:bg-amber-100 font-bold text-sm">-</button>
+                                <span class="px-2 text-xs font-black text-dairyRed">${item.qty}</span>
+                                <button onclick="updateQty('${item.id}', 1)" class="px-2 py-0.5 text-gray-700 hover:bg-amber-100 font-bold text-sm">+</button>
+                            </div>
+                            <button onclick="removeFromCart('${item.id}')" class="text-red-500 hover:text-red-700 text-sm ml-1">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function confirmAndGenerateBill() {
+            if (cart.length === 0) {
+                alert(currentLang === 'mr' ? 'कृपया प्रथम कार्टमध्ये उत्पादने जोडा!' : 'Please add products to cart first!');
+                return;
+            }
+
+            const name = document.getElementById('cust-name').value.trim();
+            const phone = document.getElementById('cust-phone').value.trim();
+            const address = document.getElementById('cust-address').value.trim();
+
+            if (!name || !phone || !address) {
+                alert(currentLang === 'mr' ? 'कृपया बिल तयार करण्यासाठी नाव, मोबाईल नंबर आणि पत्ता भरा!' : 'Please enter Name, Phone and Address!');
+                return;
+            }
+
+            const orderId = Math.floor(100000 + Math.random() * 900000);
+            const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const now = new Date().toLocaleString(currentLang === 'mr' ? 'mr-IN' : 'en-IN');
+
+            document.getElementById('bill-order-id').textContent = orderId;
+            document.getElementById('bill-date').textContent = now;
+            document.getElementById('bill-cust-name').textContent = name;
+            document.getElementById('bill-cust-phone').textContent = phone;
+            document.getElementById('bill-cust-address').textContent = address;
+            document.getElementById('bill-grand-total').textContent = `₹${totalAmount}`;
+
+            // Populate Bill Table
+            const tbody = document.getElementById('bill-items-body');
+            tbody.innerHTML = cart.map(item => {
+                const itemName = currentLang === 'mr' ? item.nameMr : item.nameEn;
+                return `
+                    <tr>
+                        <td class="p-2.5 font-bold text-gray-800">${itemName}</td>
+                        <td class="p-2.5 text-center font-bold text-gray-700">${item.qty}</td>
+                        <td class="p-2.5 text-right font-semibold">₹${item.price}</td>
+                        <td class="p-2.5 text-right font-extrabold text-dairyRed">₹${item.price * item.qty}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            // Hide Cart Drawer & Show Bill Modal
+            toggleCartDrawer();
+            document.getElementById('bill-modal').classList.remove('hidden');
+        }
+
+        function closeBillModal() {
+            document.getElementById('bill-modal').classList.add('hidden');
+        }
+
+        function printBill() {
+            window.print();
+        }
+
+        function sendWhatsAppReceipt() {
+            const name = document.getElementById('bill-cust-name').textContent;
+            const phone = document.getElementById('bill-cust-phone').textContent;
+            const address = document.getElementById('bill-cust-address').textContent;
+            const total = document.getElementById('bill-grand-total').textContent;
+            const orderId = document.getElementById('bill-order-id').textContent;
+
+            let itemsSummary = cart.map(i => `${i.nameMr} x ${i.qty} = ₹${i.price * i.qty}`).join('%0A');
+
+            const text = `*काळभैरव नाथ डेअरी (Kal Bhairav Nath Dairy)*%0A` +
+                         `*Order Invoice #${orderId}*%0A` +
+                         `----------------------------%0A` +
+                         `*Customer:* ${name}%0A` +
+                         `*Phone:* ${phone}%0A` +
+                         `*Address:* ${address}%0A` +
+                         `----------------------------%0A` +
+                         `*Order Items:*%0A${itemsSummary}%0A` +
+                         `----------------------------%0A` +
+                         `*Total Amount:* ${total}%0A%0A` +
+                         `Payment done via IPPB QR Code (9579090829@postbank). Please deliver my order in Sarola. Thank you!`;
+
+            window.open(`https://wa.me/918999665720?text=${text}`, '_blank');
+        }
+
+        function setRating(rating) {
+            selectedStarRating = rating;
+            document.getElementById('fb-rating').value = rating;
+            const stars = document.getElementById('star-rating-container').children;
+            for (let i = 0; i < stars.length; i++) {
+                if (i < rating) {
+                    stars[i].classList.add('text-amber-400');
+                    stars[i].classList.remove('text-gray-300');
+                } else {
+                    stars[i].classList.remove('text-amber-400');
+                    stars[i].classList.add('text-gray-300');
+                }
+            }
+        }
+
+        function handleFeedbackSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('fb-name').value.trim();
+            const comment = document.getElementById('fb-message').value.trim();
+
+            if (!name || !comment) return;
+
+            customerFeedbacks.unshift({
+                name: name,
+                rating: selectedStarRating,
+                comment: comment
+            });
+
+            renderFeedbacks();
+            document.getElementById('feedback-form').reset();
+            setRating(5);
+            alert(currentLang === 'mr' ? 'तुमच्या मौल्यवान अभिप्रायबद्दल धन्यवाद!' : 'Thank you for your valuable feedback!');
+        }
+
+        function renderFeedbacks() {
+            const list = document.getElementById('feedback-list');
+            list.innerHTML = customerFeedbacks.map(fb => {
+                const starsHtml = Array(5).fill(0).map((_, i) => 
+                    `<i class="fa-star ${i < fb.rating ? 'fa-solid text-amber-400' : 'fa-regular text-gray-300'} text-xs"></i>`
+                ).join('');
+
+                return `
+                    <div class="bg-amber-50/70 p-3.5 rounded-xl border border-amber-200 shadow-sm">
+                        <div class="flex justify-between items-center mb-1">
+                            <h4 class="font-extrabold text-gray-800 text-xs sm:text-sm">${fb.name}</h4>
+                            <div class="flex gap-0.5">${starsHtml}</div>
+                        </div>
+                        <p class="text-xs text-gray-600 italic">"${fb.comment}"</p>
+                    </div>
+                `;
+            }).join('');
+        }
+    </script>
+</body>
+</html>
